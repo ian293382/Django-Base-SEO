@@ -1,0 +1,24 @@
+{% extends 'core/base.html' %}
+{% block title %}{{ post.title }}{% endblock %}
+
+{%  block meta %}
+<meta name="descirption" content="{{ post.intro }}">
+<meta name="descirption" content="learn djangom python, tutorial">
+{% endblock %}
+
+
+{% block content %}
+<section class="py-6 px-6 bg-gray-100">
+    <img src="{{ post.image.url }}" alt="{{ post.title }}">
+    <h1 class="mt-6 mb-6 text-2xl">{{ post.title }}</h1>
+
+    <p class="mb-4">
+        {{ post.intro }}
+    </p>
+
+    <p>
+        {{ post.body }}
+    </p>
+</section>
+
+{% endblock %}

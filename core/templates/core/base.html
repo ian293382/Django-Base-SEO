@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <title>{% block title %}{% endblock %} |  HiDjango</title>
+        {%  block meta %}
+        
+        {% endblock %}
+    </head>
+
+    <body>
+        <h1 class="py-4 px-6  flex center justify-between bg-purple-800 text-white">
+            <a href="{% url 'core:index' %}" class="font-bold text-2xl">HiDjango</a>
+            
+            <a href="{% url 'core:about' %}" class="">About</a>
+        </h1>
+
+        {% block content %}
+        {% endblock %}
+    </body>
+</html>
